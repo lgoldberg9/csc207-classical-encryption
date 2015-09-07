@@ -6,9 +6,10 @@ public class CaeserCipher {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		System.out.println("This program encrypts and decrypts messages using the Caeser Cipher.");
 		System.out.print("Would you like to encode or decode a message? ");
+		// Declare new scanner for input
 		Scanner in = new Scanner(System.in);
 		String response = in.nextLine();
 		
