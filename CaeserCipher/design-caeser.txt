@@ -1,0 +1,56 @@
+public static void cipher(String text, String flag)
+
+1. What does this component do in a single sentence?
+cipher computes the encrypted string and decrypts an encrypted string using the Caesar Cipher.
+
+2. What is the interface to this component? What are its inputs and outputs?
+Input is handled by main, which passes 2 strings to this function: text, and flag
+The output of cipher is void since it has the side effect of printing the answer.
+
+3. What are five representative test cases this component should pass?
+Note: we choose a sample of outputs so we don't print the whole thing.
+cipher("helloworldz", "encode"):
+n = 0: helloworldz
+n = 1: ifmmpxpsmea
+n = 2: jgnnqyqtnfb
+
+cipher("ifmmpxpsmea", "decode"):
+n = 0: ifmmpxpsmea
+n = 1: helloworldz
+n = 2: gdkknvnqkcy
+
+cipher("a", "encode"):
+n = 0: a
+n = 1: b
+n = 2: c
+n = 3: d
+
+cipher("c", "decode"):
+n = 0: c
+n = 1: b
+n = 2: a
+n = 3: z
+
+cipher("", "encode"):
+n = 0: 
+n = 1: 
+n = 2:
+
+
+private static void ShiftText(char[] text, int transposer)
+
+1. What does this component do in a single sentence?
+It shifts every letter in the array text up/down (depending on transposer) by 1.
+
+2. What is the interface to this component? What are its inputs and outputs?
+cipher calls this function 26 times so we can encode/decode the same string for each
+letter in the alphabet. Its inputs are an array of chars called text, and a transposer.
+It has no output, but it changes the array text points to (so it has side effects).
+
+3. What are five representative test cases this component should pass?
+Note: when we say -> {stuff}, we are saying the original array now looks like {stuff}
+ShiftText({'y', 'z', 'a', 'b'}, 1) -> {'z', 'a', 'b', 'c'}
+ShiftText({'y', 'z', 'a', 'b'}, -1) -> {'x', 'y', 'z', 'b'}
+ShiftText({}, 1) -> {}
+ShiftText({}, -1) -> {}
+ShiftText({'h', 'e', 'l', 'l', 'o'}, 1) -> {'i', 'f', 'm', 'm', 'p'}

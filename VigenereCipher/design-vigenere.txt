@@ -1,0 +1,34 @@
+public static void cipher(String text, String key, String flag)
+
+1. What does this component do in a single sentence?
+cipher computes the encrypted string and decrypts an encrypted string using the Vigenere Cipher.
+
+2. What is the interface to this component? What are its inputs and outputs?
+Input is handled by main, which passes 3 strings to this function: text, key, flag.
+The output of cipher is void since it has the side effect of printing the answer.
+
+3. What are five representative test cases this component should pass?
+cipher("helloworldzz", "cap", "encode") -> "jeanolqrafzo"
+cipher("jeanolqraf", "cap", "decode") -> "helloworldzz"
+cipher("pmiscool", "a", "encode") -> "pmiscool"
+cipher("pmiscool", "a", "decode") -> "pmiscool"
+cipher("pmiscool", "", "encode") -> "pmiscool"
+
+
+private static char shiftChar(char ch, char key, int transposer)
+
+1. What does this component do in a single sentence?
+shiftChar takes a letter and a key letter, and shifts the letter up/down (depending on transposer)
+by the value of the key letter.
+
+2. What is the interface to this component? What are its inputs and outputs?
+
+cipher passes this function a ch (char), key (char), and transposer (int)
+output is a char, which is ch shifted up/down by transposer.
+
+3. What are five representative test cases this component should pass?
+shiftChar('b', 'a', 1) -> 'b'
+shiftChar('c', 'a', -1) -> 'c'
+shiftChar('d', 'f', 1) -> 'k'
+shiftChar('a', 'c', -1) -> 'y'
+shiftChar('z', 'b', 1) -> 'a'
